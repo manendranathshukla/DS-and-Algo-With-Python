@@ -1,4 +1,4 @@
-# DS-and-Algo-With-Python-
+# DS-and-Algo-With-Python
 This Respository will help those people who very eger to learn Data Structure and Algorithm with Python easily.
 
 Thanks for referring my Repository.
