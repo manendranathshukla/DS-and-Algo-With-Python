@@ -28,15 +28,21 @@ class Stack:            # Stack Class Like LinkedList
     def pop(self):          #method to remove a last inserted element 
         if(self.top is None):
             print("Stack Underflow") #if stack is empty
-            return
+            return False
         #print("Poped")
-        self.top=self.top.next
+        else:
+            self.top=self.top.next
+            return True
 
     def display(self):  #display the stack data
         temp=self.top
-        while(temp is not None):
-            print(temp.data)
-            temp=temp.next
+        if(self.top is None):
+            print("Stack is Empty")
+            return
+        else:
+            while(temp is not None):
+                print(temp.data)
+                temp=temp.next
         
 
 if __name__ == "__main__":
@@ -59,8 +65,10 @@ if __name__ == "__main__":
             myStack.push(d)
             print("Data is Pushed in Stack Successfully")
         if(ch==2):
-            myStack.pop()
-            print("Stack Element is Popped  Sucessfully")
+            d=myStack.pop()
+            if(d==True):
+                print("Stack  Top Element is Popped  Sucessfully")
+                
         if(ch==3):
             print("Stack Elements are:")
             myStack.display()
