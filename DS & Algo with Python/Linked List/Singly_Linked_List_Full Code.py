@@ -125,6 +125,8 @@ class LinkedList:
     def DeleteFirst(self):
         if(self.head is None):
             print("Underflow")
+        if(self.head.next is None):
+            self.head=None
         else:
             self.head=self.head.next 
 
@@ -145,6 +147,8 @@ class LinkedList:
         temp=self.head
         if(temp is None):
             print("Underflow")
+        if(self.head.next is None):
+            self.head=None
         else:
             while(temp.next is not None):
                 prev=temp
