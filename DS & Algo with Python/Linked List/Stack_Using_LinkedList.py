@@ -30,6 +30,9 @@ class Stack:            # Stack Class Like LinkedList
             print("Stack Underflow") #if stack is empty
             return False
         #print("Poped")
+        if(self.top.next is None):
+            self.top=None
+            return True
         else:
             self.top=self.top.next
             return True
