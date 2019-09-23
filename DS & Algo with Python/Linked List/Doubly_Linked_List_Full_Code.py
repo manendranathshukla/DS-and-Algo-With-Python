@@ -10,9 +10,6 @@ class Node:
 class DoublyLinkedList:
     def __init__(self):
         self.head=None
-
-    def getNode(self,index):
-        pass
         
         
     def prepend(self,data):
@@ -60,15 +57,12 @@ class DoublyLinkedList:
         if(self.head is None):
             print("List is Empty")
             return
-        curr=self.head
-        temp=curr.next
-        curr.next=None
-        curr.prev=temp
-        while curr is not None:
-            temp.prev=temp.next
-            temp.next=curr
-            curr=curr.next
-        self.head=curr
+        temp=self.head
+        while(temp is not None):
+            temp.next,temp.prev=temp.prev,temp.next
+            self.head=temp
+            temp=self.head.prev
+        
             
     def createNode(self,data):
         if self.head is None:
@@ -96,8 +90,7 @@ class DoublyLinkedList:
     def Search(self,data):
         pass
     def displayRev(self):
-        pass
-            
+                    
 
 
 if __name__=="__main__":
